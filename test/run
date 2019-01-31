@@ -58,7 +58,7 @@ testNLTK() {
   # be bad to silence in Production.
   export PYTHONWARNINGS="ignore::RuntimeWarning"
   compile "nltk"
-  assertCaptured "[nltk_data] Downloading package city_database"
+  assertCaptured "[nltk_data] Downloading package city_database" "STD_ERR"
   assertCapturedSuccess
 }
 
