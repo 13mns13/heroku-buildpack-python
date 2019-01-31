@@ -94,7 +94,6 @@ assertNotCaptured()
 assertCapturedSuccess()
 {
   assertEquals "Captured exit code -" "0" "${RETURN}"
-  assertEquals "STD_ERR -" "" "$(cat ${STD_ERR})"
 
   if [ $RETURN -ne 0 -a -z "$(cat ${STD_ERR})" ]; then
     # Failing exit code but stderr was empty. Display stdout to help debugging.
